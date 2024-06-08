@@ -1,5 +1,5 @@
 # DIS
-## Initialization ✔
+### Initialization ✔
 
 Clone / download repository files 
 
@@ -8,6 +8,12 @@ Check that you are in the DatabaseProject_v2 folder or navigate into it
 To start and run the server, use the following commands
     python create_database.py
     python app.py
+ ### Interaction 
+- You can interact both as an anonymous user or by creating a user and logging in.
+- Choose a difficulty level and a muscle group.
+- Select the exercise you want to add to your program
+- Get the program shown.
+- If the desired exercise is not found, it can be added under 'add exercies'
 
 ### Folder Setup 📁
 The project directory is structured to separate different aspects of the application:
