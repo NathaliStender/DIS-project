@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Program</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/personal_program">Personal Program</a>
+            <a href="/add_new_exercise">Add New Exercise</a> 
+        </nav>
+    </header>
+    <div class="container">
+        <h1>My Personal Program</h1>
+        <ul>
+            {% for exercise in personal_exercises %}
+                <li>{{ exercise['exercise'] }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="link-button">Go Back</a>
+    </div>
+</body>
+</html>

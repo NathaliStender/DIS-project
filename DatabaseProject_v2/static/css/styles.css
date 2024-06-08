@@ -1,0 +1,136 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Styles */
+header {
+    width: 100%;
+    background-color: #2A4D69;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 20px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Container Styles */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    margin-top: 60px;
+    box-sizing: border-box;
+}
+
+/* Typography */
+h1, h2 {
+    color: #2C3E50;
+}
+
+/* Form Styles */
+form {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.label, .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+select, input[type="text"], input[type="password"] {
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2874A6;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    background: #D1E8E2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Additional Button Styles */
+.link-button {
+    background-color: #3498DB;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.link-button:hover {
+    background-color: #2874A6;
+}
+
+/* Alert Messages */
+.alert, .flash-messages {
+    color: red;
+    font-size: 16px;
+    margin: 10px 0;
+}

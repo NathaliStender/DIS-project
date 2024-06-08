@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Selector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/personal_program">Personal Program</a> 
+            <a href="/add_new_exercise">Add New Exercise</a> 
+            <a href="/login">Login</a>
+            <a href="/register">Register</a> 
+
+
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Select Exercises</h1>
+        <form method="post" action="/get_exercises">
+            <label for="difficulty">Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="Novice">Novice</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+            </select>
+            <label for="muscle_group">Muscle Group:</label>
+            <select name="muscle_group" id="muscle_group">
+                <option value="Abdominals">Abdominals</option>
+                <option value="Chest">Chest</option>
+                <option value="Glutes">Glutes</option>
+                <option value="Back">Back</option>
+                <option value="Adductors">Adductors</option>
+                <option value="Shoulders">Shoulders</option>
+                <option value="Biceps">Biceps</option>
+                <option value="Hamstrings">Hamstrings</option>
+                <option value="Calves">Calves</option>
+                <option value="Quadriceps">Quadriceps</option>
+                <option value="Triceps">Triceps</option>
+                <option value="Forearm">Forearm</option>
+            </select>
+            <button type="submit">Find Exercises</button>
+        </form>
+        {% if exercises %}
+            <h2>Exercises</h2>
+            <ul>
+                {% for exercise in exercises %}
+                    <li>{{ exercise['exercise'] }}
+                        <form method="post" action="/add_to_program" style="display:inline;">
+                            <input type="hidden" name="exercise" value="{{ exercise['exercise'] }}">
+                            <button type="submit">Add to Personal Program</button>
+                        </form>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+        <h2>Manage Personal Program</h2>
+        <form method="post" action="/clear_program">
+            <button type="submit">Clear Personal Program</button>
+        </form>
+    </div>
+</body>
+</html>
